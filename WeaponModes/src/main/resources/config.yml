@@ -1,0 +1,96 @@
+# Each top-level key defines a weapon with switchable modes.
+# Right-click cycles through modes in order.
+
+weapons:
+  phantom_blade:
+    display-name: "Phantom Blade"
+    base-material: NETHERITE_SWORD
+    modes:
+      normal:
+        display-name: "&fPhantom Blade &8[&7Normal&8]"
+        lore:
+          - "&7A balanced stance."
+          - "&8――――――――――――――――――"
+          - "&7Right-click: Switch mode"
+        attributes:
+          attack_damage:
+            attribute: GENERIC_ATTACK_DAMAGE
+            value: 8.0
+            operation: ADD_NUMBER
+            slot: MAINHAND
+          attack_speed:
+            attribute: GENERIC_ATTACK_SPEED
+            value: -2.4
+            operation: ADD_NUMBER
+            slot: MAINHAND
+
+      offensive:
+        display-name: "&cPhantom Blade &8[&4Offensive&8]"
+        lore:
+          - "&cAggressive stance. High damage, slow swing."
+          - "&8――――――――――――――――――"
+          - "&7Right-click: Switch mode"
+          - "&7On-hit: &aLifesteal 20%"
+        attributes:
+          attack_damage:
+            attribute: GENERIC_ATTACK_DAMAGE
+            value: 14.0
+            operation: ADD_NUMBER
+            slot: MAINHAND
+          attack_speed:
+            attribute: GENERIC_ATTACK_SPEED
+            value: -2.8
+            operation: ADD_NUMBER
+            slot: MAINHAND
+        on-hit:
+          lifesteal: 0.20
+
+      debuff:
+        display-name: "&5Phantom Blade &8[&5Debuff&8]"
+        lore:
+          - "&5Curses enemies on hit."
+          - "&8――――――――――――――――――"
+          - "&7Right-click: Switch mode"
+          - "&7On-hit: &5Slowness I &8/ &5Weakness I &8/ &5Wither II"
+        attributes:
+          attack_damage:
+            attribute: GENERIC_ATTACK_DAMAGE
+            value: 6.0
+            operation: ADD_NUMBER
+            slot: MAINHAND
+          attack_speed:
+            attribute: GENERIC_ATTACK_SPEED
+            value: -2.4
+            operation: ADD_NUMBER
+            slot: MAINHAND
+        on-hit:
+          effects:
+            - "SLOWNESS:1:60"
+            - "WEAKNESS:1:60"
+            - "WITHER:2:60"
+
+      defensive:
+        display-name: "&9Phantom Blade &8[&9Defensive&8]"
+        lore:
+          - "&9Defensive stance. Grants armor while held."
+          - "&8――――――――――――――――――"
+          - "&7Right-click: Switch mode"
+        attributes:
+          attack_damage:
+            attribute: GENERIC_ATTACK_DAMAGE
+            value: 5.0
+            operation: ADD_NUMBER
+            slot: MAINHAND
+          attack_speed:
+            attribute: GENERIC_ATTACK_SPEED
+            value: -2.4
+            operation: ADD_NUMBER
+            slot: MAINHAND
+          generic_armor:
+            attribute: GENERIC_ARMOR
+            value: 10.0
+            operation: ADD_NUMBER
+            slot: MAINHAND
+        while-held:
+          effects:
+            - "RESISTANCE:1"

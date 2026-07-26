@@ -1,0 +1,7 @@
+name: ItemTraitsStats
+version: '${version}'
+main: dev.itemtraits.stats.ItemTraitsStatsPlugin
+api-version: '1.21'
+description: Applies ItemTraits values as actual attribute modifiers
+author: shiba
+depend: [ItemTraits]

@@ -1,0 +1,17 @@
+name: WeaponModes
+version: '${version}'
+main: dev.weaponmodes.WeaponModesPlugin
+api-version: '1.21'
+description: Configurable mode-switching weapon system
+author: shiba
+softdepend: [ItemTraits]
+commands:
+  weaponmodes:
+    description: WeaponModes commands
+    aliases: [wm]
+    permission: weaponmodes.admin
+    usage: /<command> <give|reload>
+permissions:
+  weaponmodes.admin:
+    description: Admin commands
+    default: op

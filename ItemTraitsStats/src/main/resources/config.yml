@@ -1,0 +1,19 @@
+# Maps trait keys to Minecraft attribute modifiers.
+# attribute: Bukkit Attribute enum name (e.g. GENERIC_ATTACK_DAMAGE)
+# operation: ADD_NUMBER, ADD_SCALAR, or MULTIPLY_SCALAR_1
+# slot: HAND, OFF_HAND, HEAD, CHEST, LEGS, FEET, or ANY
+# scale: multiplier applied to trait value before use (default 1.0)
+bindings:
+  attack:
+    attribute: GENERIC_ATTACK_DAMAGE
+    operation: ADD_NUMBER
+    slot: HAND
+  crit_rate:
+    attribute: GENERIC_ATTACK_DAMAGE
+    operation: ADD_SCALAR
+    slot: HAND
+    scale: 0.01
+  defense:
+    attribute: GENERIC_ARMOR
+    operation: ADD_NUMBER
+    slot: ANY

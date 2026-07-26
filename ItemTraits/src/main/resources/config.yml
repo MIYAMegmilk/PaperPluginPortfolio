@@ -1,0 +1,21 @@
+schema-version: 1
+
+traits:
+  attack:
+    display-name: "Attack Power"
+    min: 1.0
+    max: 20.0
+    precision: 1
+    format: "+{value}"
+  crit_rate:
+    display-name: "Critical Rate"
+    min: 0.0
+    max: 100.0
+    precision: 0
+    format: "{value}%"
+  defense:
+    display-name: "Defense"
+    min: 1.0
+    max: 15.0
+    precision: 0
+    format: "+{value}"

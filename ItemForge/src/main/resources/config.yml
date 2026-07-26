@@ -1,0 +1,37 @@
+# Evolution recipes.
+# When a player places matching input + materials, the output becomes available.
+# Traits from the input item are transferred to the output via ItemTraits API.
+
+recipes:
+  iron_to_diamond:
+    input: IRON_SWORD
+    output:
+      material: DIAMOND_SWORD
+      name: "&bEvolved Diamond Blade"
+      lore:
+        - "&7Forged from iron through evolution."
+    materials:
+      - "DIAMOND:3"
+      - "BLAZE_POWDER:2"
+
+  diamond_to_netherite:
+    input: DIAMOND_SWORD
+    output:
+      material: NETHERITE_SWORD
+      name: "&6Ascended Netherite Blade"
+      lore:
+        - "&7Reforged in the flames of the Nether."
+    materials:
+      - "NETHERITE_INGOT:2"
+      - "NETHER_STAR:1"
+
+  bow_upgrade:
+    input: BOW
+    output:
+      material: CROSSBOW
+      name: "&dPhantom Crossbow"
+      lore:
+        - "&7An ancient bow, reborn."
+    materials:
+      - "PHANTOM_MEMBRANE:4"
+      - "END_ROD:1"

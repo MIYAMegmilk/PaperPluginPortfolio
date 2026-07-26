@@ -1,0 +1,18 @@
+name: ItemTraits
+version: '${version}'
+main: dev.itemtraits.ItemTraitsPlugin
+api-version: '1.21'
+description: Per-item trait system backed by PersistentDataContainer
+author: shiba
+commands:
+  traits:
+    description: Manage item traits
+    permission: itemtraits.inspect
+    usage: /<command> <inspect|generate>
+permissions:
+  itemtraits.inspect:
+    description: Inspect traits on held item
+    default: true
+  itemtraits.generate:
+    description: Generate random traits on held item
+    default: op

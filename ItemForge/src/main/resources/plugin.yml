@@ -1,0 +1,16 @@
+name: ItemForge
+version: '${version}'
+main: dev.itemforge.ItemForgePlugin
+api-version: '1.21'
+description: GUI-based item evolution system that preserves traits
+author: shiba
+depend: [ItemTraits]
+commands:
+  forge:
+    description: Open the evolution forge
+    permission: itemforge.use
+    usage: /<command>
+permissions:
+  itemforge.use:
+    description: Open the forge GUI
+    default: true
